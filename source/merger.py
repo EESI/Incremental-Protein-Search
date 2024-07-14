@@ -11,6 +11,14 @@ def get_m8_record(result_file):
     return records
 
 
+def get_m8e_record(result_file):
+    with open(result_file, 'r') as file:
+        first_line = file.readline().strip()  # read first line to get DB length
+        length = int(first_line.split(':')[1])  # get length value
+        reader = csv.reader(file, delimiter='\t')
+        records = [row for row in reader]
+    return records, length
+
 
 
 def merge_records_m8(records1, records2):
@@ -66,6 +74,25 @@ def merge_m8_files(file1, file2, output_file, part_db_len1, part_db_len2):
         writer = csv.writer(f, delimiter='\t')
         #for record in merged_records: 
         for record in tqdm(merged_records, desc="Writing merged records", unit="record"):#applying tqdm
+            writer.writerow(record)
+
+            
+def merge_m8e_files(file1, file2, output_file):  
+    records1, part_db_len1 = get_m8e_record(file1)
+    records2, part_db_len2 = get_m8e_record(file2)
+    
+    full_db_len = part_db_len1 + part_db_len2  # merged file db length
+
+    # e-value rescale
+    rescale_evalues_m8(records1, part_db_len1, full_db_len)   
+    rescale_evalues_m8(records2, part_db_len2, full_db_len)   
+
+    # merge record and write file
+    merged_records = merge_records_m8(records1, records2)
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.writer(f, delimiter='\t')        
+        writer.writerow([f'dblength:{full_db_len}'])  # write full_db_len 
+        for record in tqdm(merged_records, desc="Writing merged records", unit="record"):#tqdm update
             writer.writerow(record)
 
             
