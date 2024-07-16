@@ -24,6 +24,8 @@ We developed Incremental Protein Search highly inspired by iBlast(https://github
 
 $ docker pull comhyunwoo/incremental-protein-search:latest
 
-$ docker run --rm -v /home/user/data:/app/data incremental-protein-search --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928
 
-$ docker run --rm -v /home/user/data:/app/data incremental-protein-search --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928
+$ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-search:latest --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928  
+
+
+$ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-search:latest --extension /app/data/blastp_astral_scope_result2.m8e /app/data/blastp_astral_scope_result3.m8e /app/data/merge_blastp_astral_scope_result23.m8e  
