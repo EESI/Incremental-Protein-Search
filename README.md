@@ -29,3 +29,13 @@ $ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-se
 
 
 $ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-search:latest --extension /app/data/blastp_astral_scope_result2.m8e /app/data/blastp_astral_scope_result3.m8e /app/data/merge_blastp_astral_scope_result23.m8e  
+
+## Singularity
+
+$ singularity pull docker://comhyunwoo/incremental-protein-search:latest
+
+
+$ singularity exec -B /home/user/data:/app/data incremental-protein-search_latest.sif /bin/bash -c "cd /app/Incremental-Protein-Search && ./run_merge.sh --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928"
+
+
+$ singularity exec -B /home/user/data:/app/data incremental-protein-search_latest.sif /bin/bash -c "cd /app/Incremental-Protein-Search && ./run_merge.sh --extension /app/data/blastp_astral_scope_result2.m8e /app/data/blastp_astral_scope_result3.m8e /app/data/merge_blastp_astral_scope_result23.m8e"
