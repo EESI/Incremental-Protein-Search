@@ -26,6 +26,16 @@ Optional Parameters (for default mode only):
   PARAM2       Second integer parameter (e.g., sequence length)
 ```
 
+## Utils  
+
+### Calculating DB length(get FASTA file size)
+
+```
+$ python utils/fasta_length_calculator.py <fasta_file_path>
+
+```
+
+
 ## Usage example
 
 ### default mode
@@ -70,14 +80,7 @@ $ singularity exec -B /home/user/data:/app/data incremental-protein-search_lates
 
 
 
-## Utils  
 
-### Calculating DB length(get FASTA file size)
-
-```
-$ python utils/fasta_length_calculator.py <fasta_file_path>
-
-```
 
 
 This tool is particularly useful in protein sequence analysis workflows, especially when dealing with large datasets. The incremental search approach can significantly improve efficiency in processing and analyzing protein data. Its flexibility in execution methods (local, Docker, Singularity) makes it adaptable to various computational environments, from personal workstations to high-performance computing clusters.
