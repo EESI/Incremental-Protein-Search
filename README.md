@@ -7,6 +7,12 @@ We developed Incremental Protein Search highly inspired by iBlast(https://github
 
 Incremental Protein Search is a tool designed to merge protein search results. It operates in two modes: default and extension, supporting .m8 and .m8e files respectively. The tool can be run locally, via Docker, or using Singularity.
 
+To view a tutorial example, please visit the following link:
+
+[https://github.com/EESI/Incremental-Protein-Search/tree/main/examples](https://github.com/EESI/Incremental-Protein-Search/tree/main/examples)
+
+
+
 ## Usage  
 
 ```bash
