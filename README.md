@@ -1,4 +1,4 @@
-# Incremental-Protein-Search
+# iSeqSearch: Incremental Protein Search for iBlast/iMMSeqs2/iDiamond  
 
 We developed Incremental Protein Search highly inspired by iBlast(https://github.com/vtsynergy/iBLAST).  
 
