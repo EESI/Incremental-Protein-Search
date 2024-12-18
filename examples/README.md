@@ -34,8 +34,8 @@ This example is for m8e format.
 First, convert m8 format to m8e format using the following Python scripts:
 
 ```bash
-python3 utils/m8_to_m8e_converter.py examples/fasta_example1.fa examples/input_example1.m8 examples/m8e_example1.m8e
-python3 utils/m8_to_m8e_converter.py examples/fasta_example2.fa examples/input_example2.m8 examples/m8e_example2.m8e
+python3 utils/m8_to_m8e_converter.py examples/input_example1.m8 examples/fasta_example1.fa examples/m8e_example1.m8e
+python3 utils/m8_to_m8e_converter.py examples/input_example2.m8 examples/fasta_example2.fa examples/m8e_example2.m8e
 ```
 
 Then, run the merge function as follows:
