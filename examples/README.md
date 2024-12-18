@@ -1,4 +1,4 @@
-# Tutorial Example
+# Tutorial Example 1
 
 This tutorial should be executed from the root directory.
 
@@ -25,3 +25,8 @@ Using these lengths, run the merge function as follows:
 
 This will generate the result file examples/output_example.m8.
 
+
+
+# Tutorial Example 2
+
+This example is for m8e format.
