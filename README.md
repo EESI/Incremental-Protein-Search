@@ -11,6 +11,13 @@ To view a tutorial example, please visit the following link:
 
 [https://github.com/EESI/Incremental-Protein-Search/tree/main/examples](https://github.com/EESI/Incremental-Protein-Search/tree/main/examples)
 
+## Requirements
+
+To run this project, ensure that the following dependencies are installed:
+
+- **Python**: Version 3.8 or higher
+- **Biopython**: Version 1.79 (for sequence handling)
+- **NumPy**: Version 1.21.0 (for numerical computations)
 
 
 ## Usage  
