@@ -1,4 +1,4 @@
-# base image
+# select base image
 FROM ubuntu:20.04
 
 # packages setting
