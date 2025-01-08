@@ -24,7 +24,7 @@ To run this project, ensure that the following dependencies are installed:
 ## Usage  
 
 ```bash
-Usage: ./run_merge.sh [MODE] [INPUT_FILE1] [INPUT_FILE2] [OUTPUT_FILE] [OPTIONAL_PARAMETERS]
+Usage: ./run_merge.sh [MODE] [INPUT_FILE1] [INPUT_FILE2] [OUTPUT_FILE] [DEFAULT_MODE_PARAMETERS]
 
 Modes:
   --default    Use default mode for .m8 files
@@ -35,9 +35,9 @@ Arguments:
   INPUT_FILE2  Path to the second input file
   OUTPUT_FILE  Path to the output merged file
 
-Optional Parameters (for default mode only):
-  PARAM1       First integer parameter (e.g., sequence length)
-  PARAM2       Second integer parameter (e.g., sequence length)
+Parameters Applicable Only to Default Mode:
+  PARAM1       First integer parameter (e.g., sequence length of the first input file)
+  PARAM2       Second integer parameter (e.g., sequence length of the second input file)
 ```
 
 ## Utils  
