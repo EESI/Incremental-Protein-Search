@@ -86,10 +86,12 @@ $ docker run --rm -v "$(pwd)":/app -w /app comhyunwoo/incremental-protein-search
 $ singularity pull docker://comhyunwoo/incremental-protein-search:latest
 
 
-$ singularity exec -B /home/user/data:/app/data incremental-protein-search_latest.sif /bin/bash -c "cd /app/Incremental-Protein-Search && ./run_merge.sh --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928"
+$ singularity exec -B "$(pwd)":/app incremental-protein-search_latest.sif \
+    /bin/bash -c "cd /app && ./run_merge.sh --default /app/examples/input_example1.m8 /app/examples/input_example2.m8 /app/examples/output_example.m8 6205115 6211928"
 
 
-$ singularity exec -B /home/user/data:/app/data incremental-protein-search_latest.sif /bin/bash -c "cd /app/Incremental-Protein-Search && ./run_merge.sh --extension /app/data/blastp_astral_scope_result2.m8e /app/data/blastp_astral_scope_result3.m8e /app/data/merge_blastp_astral_scope_result23.m8e"
+$ singularity exec -B "$(pwd)":/app incremental-protein-search_latest.sif \
+    /bin/bash -c "cd /app && ./run_merge.sh --extension /app/examples/m8e_example1.m8e /app/examples/m8e_example2.m8e /app/examples/output_example.m8e"
 ```
 
 
