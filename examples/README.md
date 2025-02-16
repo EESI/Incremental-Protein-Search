@@ -1,3 +1,32 @@
+## Prerequisites: Git LFS Installation
+
+This tutorial requires **Git LFS (Large File Storage)** to properly download example files from the repository.  
+If Git LFS is not installed, some files in the `examples/` directory may not be available or may appear as placeholder text.
+
+### Install Git LFS
+
+If Git LFS is not installed, you can install it using `conda`:
+
+```bash
+conda install -c conda-forge git-lfs
+```
+
+### Initialize Git LFS in the Repository
+
+After cloning the repository, you must run the following commands **from the root directory** to properly download the required files:
+
+```bash
+git lfs install
+git lfs pull
+```
+
+These commands ensure that all example files, including those in the examples/ directory, are properly retrieved.
+Running git lfs pull is essential, as Git LFS stores large files separately and only downloads them when explicitly requested.
+
+
+
+
+
 # Tutorial Example 1
 
 This tutorial should be executed from the root directory.
