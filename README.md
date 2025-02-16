@@ -73,10 +73,10 @@ $ ./run_merge.sh --extension source/blastp_astral_scope_result2.m8e source/blast
 $ docker pull comhyunwoo/incremental-protein-search:latest
 
 
-$ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-search:latest --default /app/data/blastp_astral_scope_result2.m8 /app/data/blastp_astral_scope_result3.m8 /app/data/merge_blastp_astral_scope_result23.m8 6205115 6211928  
+$ docker run --rm -v "$(pwd)":/app -w /app comhyunwoo/incremental-protein-search:latest     --default /app/examples/input_example1.m8 /app/examples/input_example2.m8 /app/examples/output_example.m8 6205115 6211928  
 
 
-$ docker run --rm -v /home/user/data:/app/data comhyunwoo/incremental-protein-search:latest --extension /app/data/blastp_astral_scope_result2.m8e /app/data/blastp_astral_scope_result3.m8e /app/data/merge_blastp_astral_scope_result23.m8e  
+$ docker run --rm -v "$(pwd)":/app -w /app comhyunwoo/incremental-protein-search:latest     --extension /app/examples/m8e_example1.m8e /app/examples/m8e_example2.m8e /app/examples/output_example.m8e  
 ```
 
 
