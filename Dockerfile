@@ -15,10 +15,16 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 WORKDIR /app
 
 # clone GitHub repo
-RUN git clone https://github.com/ece303/Incremental-Protein-Search.git
+RUN git clone https://github.com/EESI/Incremental-Protein-Search.git
 
 # move to working directory
 WORKDIR /app/Incremental-Protein-Search
 
 # install requirements.txt
 RUN pip3 install -r requirements.txt
+
+# set chmod +x
+RUN chmod +x run_merge.sh
+
+
+ENTRYPOINT ["./run_merge.sh"]
