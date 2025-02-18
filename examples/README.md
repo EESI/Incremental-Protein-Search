@@ -28,7 +28,7 @@ Running git lfs pull is essential, as Git LFS stores large files separately and 
 ### Alternative Download Option  
 
 If you prefer, you can manually download the required files from the following link:  
-[Google Drive - Example Files](https://drive.google.com/drive/folders/12SUcbIlfDfh0tVNxh7crxiVo5pUpWvdy?usp=sharing)  
+[Google Drive](https://drive.google.com/drive/folders/12SUcbIlfDfh0tVNxh7crxiVo5pUpWvdy?usp=sharing)  or [zenodo](https://zenodo.org/records/14889774)
 
 Download **`fasta_example1.fa`** and **`fasta_example2.fa`**, and place them in the `examples/` directory.
 
